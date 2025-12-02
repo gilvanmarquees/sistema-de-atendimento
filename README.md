@@ -61,9 +61,4 @@ Mostra:
 - **JavaScript ES6+**
 - **CSS3**
 - **Hooks (useState, useMemo, useRef)**
-- Estrutura de pastas organizada em `views/`
-
----
-
-## 📁 Estrutura do Projeto
-
+- **Estrutura de pastas organizada em `views/`**

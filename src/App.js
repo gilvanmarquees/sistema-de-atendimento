@@ -6,6 +6,7 @@ import ViewAC from "./views/ViewAC";
 import ViewAS from "./views/ViewAS";
 import ViewAA from "./views/ViewAA";
 import ViewPainel from "./views/ViewPainel";
+import ViewMamaco from "./views/mamaco";
 
 const TIPOS_SENHA = [
   { codigo: "SP", label: "Prioritária (SP)" },
@@ -58,7 +59,7 @@ export default function App() {
     if (!sequenciaPorDiaRef.current[chave]) sequenciaPorDiaRef.current[chave] = { SP: 0, SE: 0, SG: 0 };
     sequenciaPorDiaRef.current[chave][tipo] += 1;
     const seq = sequenciaPorDiaRef.current[chave][tipo];
-    
+
     setSequenciaPorDia((prev) => {
       const copia = { ...prev };
       copia[chave] = { ...(copia[chave] || { SP: 0, SE: 0, SG: 0 }) };
@@ -125,7 +126,7 @@ export default function App() {
       }
       return null;
     };
-    console.log(`DEBUG:  últimas chamadas = ${ultimasChamadas}`);
+
     // pega o tipo da penúltima chamada (ou null se não existir)
     const tipoPenultimaChamada = ultimasChamadas[1]?.tipo ?? null;
     const tipoUltimaChamada = ultimasChamadas[0]?.tipo ?? null;
@@ -227,6 +228,7 @@ export default function App() {
           <button onClick={() => setView("AS")} className={view === "AS" ? "active" : ""}>AS - Sistema</button>
           <button onClick={() => setView("AA")} className={view === "AA" ? "active" : ""}>AA - Atendente</button>
           <button onClick={() => setView("PAINEL")} className={view === "PAINEL" ? "active" : ""}>Painel</button>
+          <button onClick={() => setView("MAMACO")} className={`danger ${view === "MAMACO" ? "active" : ""}`}>Limpar Fila</button>
         </div>
       </header>
 
@@ -268,6 +270,10 @@ export default function App() {
             filaSenhas={filaSenhas}
             relatorio={relatorio}
           />
+        )}
+
+        {view === "MAMACO" && (
+          <ViewMamaco />
         )}
       </main>
 
