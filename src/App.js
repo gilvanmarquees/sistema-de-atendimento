@@ -58,7 +58,7 @@ export default function App() {
     if (!sequenciaPorDiaRef.current[chave]) sequenciaPorDiaRef.current[chave] = { SP: 0, SE: 0, SG: 0 };
     sequenciaPorDiaRef.current[chave][tipo] += 1;
     const seq = sequenciaPorDiaRef.current[chave][tipo];
-
+    
     setSequenciaPorDia((prev) => {
       const copia = { ...prev };
       copia[chave] = { ...(copia[chave] || { SP: 0, SE: 0, SG: 0 }) };
