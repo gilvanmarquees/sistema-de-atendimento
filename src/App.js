@@ -27,7 +27,7 @@ function formatarYYMMDD(data = new Date()) {
 
 // Gera código da senha no formato YYMMDD-TTNN
 function gerarCodigo(data, tipo, seq) {
-  return `${formatarYYMMDD(data)}-${tipo}${String(seq).padStart(2, "0")}`; // Ex: 240615-SP01 (15 de junho de 2024, SP, seq 1)
+  return `${formatarYYMMDD(data)}-${tipo}${String(seq).padStart(2, "0")}`; // Ex: 240615-SP01 (15 de junho de 2024, Senha Preferencial (SP), seq 1)
 }
 
 // Retorna chave do dia no formato YYYY-MM-DD
@@ -228,7 +228,7 @@ export default function App() {
           <button onClick={() => setView("AS")} className={view === "AS" ? "active" : ""}>AS - Sistema</button>
           <button onClick={() => setView("AA")} className={view === "AA" ? "active" : ""}>AA - Atendente</button>
           <button onClick={() => setView("PAINEL")} className={view === "PAINEL" ? "active" : ""}>Painel</button>
-          <button onClick={() => setView("MAMACO")} className={`danger ${view === "MAMACO" ? "active" : ""}`}>Limpar Fila</button>
+          <button onClick={() => setView("MAMACO")} className={`danger ${view === "MAMACO" ? "active" : ""}`}>Mamaco</button>
         </div>
       </header>
 
@@ -278,7 +278,7 @@ export default function App() {
       </main>
 
       <footer>
-        <small>Projeto Faculdade — React simples </small>
+        <small>Projeto Faculdade — Sistema de atendimento com React simples</small>
       </footer>
     </div>
   );
