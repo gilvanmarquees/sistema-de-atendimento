@@ -1,14 +1,13 @@
-// src/views/ViewAS.jsx
 import React from "react";
 
-export default function ViewAS({ tiposSenha, criarSenhaSistema, limparSistema, filaSenhas, relatorio }) {
+export default function ViewAS({ tiposSenha, criarSenha, limparSistema, filaSenhas, relatorio }) {
     return (
         <div className="view">
             <h2>AS - Agente Sistema</h2>
             <p>Emita senhas manualmente ou gerencie o sistema.</p>
             <div className="btn-row">
                 {tiposSenha.map((t) => (
-                    <button key={t.codigo} onClick={() => criarSenhaSistema(t.codigo)}>Emitir {t.codigo}</button>
+                    <button key={t.codigo} onClick={() => criarSenha(t.codigo, "AS")}>Emitir {t.codigo}</button>
                 ))}
                 <button onClick={limparSistema} className="danger">Reiniciar dia</button>
             </div>

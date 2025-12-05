@@ -1,14 +1,13 @@
-// src/views/ViewAC.jsx
 import React from "react";
 
-export default function ViewAC({ tiposSenha, criarSenhaTotem, filaSenhas, totalEmitidas }) {
+export default function ViewAC({ tiposSenha, criarSenha, filaSenhas, totalEmitidas }) {
     return (
         <div className="view">
             <h2>AC - Totem (Cliente)</h2>
             <p>Escolha o tipo de senha:</p>
             <div className="btn-row">
                 {tiposSenha.map((t) => (
-                    <button key={t.codigo} onClick={() => criarSenhaTotem(t.codigo)}>{t.label}</button>
+                    <button key={t.codigo} onClick={() => criarSenha(t.codigo)}>{t.label}</button>
                 ))}
             </div>
             <small>Senhas emitidas hoje: {totalEmitidas}</small>

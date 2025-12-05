@@ -1,4 +1,3 @@
-// src/views/ViewAA.jsx
 import React, { useState } from "react";
 
 export default function ViewAA({
@@ -9,6 +8,7 @@ export default function ViewAA({
   filaSenhas,
   ultimasChamadas,
   senhasAtendidas,
+  podeChamarProxima
 }) {
   const [guicheSelecionado, setGuicheSelecionado] = useState(guiches && guiches.length > 0 ? guiches[0] : "1");
 
@@ -30,7 +30,7 @@ export default function ViewAA({
           </select>
         </label>
 
-        <button onClick={() => chamarSenha(guicheSelecionado)}>Chamar Próxima</button>
+        <button onClick={() => chamarSenha(guicheSelecionado)} disabled={podeChamarProxima(guicheSelecionado) === false}>Chamar Próxima</button>
         <button onClick={() => finalizarAtendimento(guicheSelecionado)} className="small">Finalizar Atendimento</button>
       </div>
 

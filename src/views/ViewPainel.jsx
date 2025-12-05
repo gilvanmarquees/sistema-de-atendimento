@@ -1,4 +1,3 @@
-// src/views/ViewPainel.jsx
 import React from "react";
 
 export default function ViewPainel({ ultimasChamadas, filaSenhas, relatorio }) {

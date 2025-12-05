@@ -75,7 +75,7 @@ Mostra:
 - ✅ **Agentes AS, AA e AC**
 - ✅ **Tipos de senha SP, SG e SE**
 - ❌ **Tempos médios de atendimento**
-- ✅ **Regra de Prioridade das Chamadas**
+- ✅ **Regra de Prioridade das Chamadas SP > SE > SP > SG**
 - ❌ **Horário de Funcionamento**
 - ✅ **Descarte natural de senhas**
 - ✅ **Formato da numeração da senha (YYMMDD-PPSQ)**
