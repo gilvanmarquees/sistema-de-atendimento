@@ -38,6 +38,7 @@ function getChaveDoDia(data = new Date()) {
 
 // função principal do App
 export default function App() {
+  // estado da view atual
   const [view, setView] = useState("AC"); // AC / AS / AA / PAINEL
 
   // estados principais
@@ -246,8 +247,8 @@ export default function App() {
           <button onClick={() => setView("AC")} className={view === "AC" ? "active" : ""}>AC - Totem</button>
           <button onClick={() => setView("AS")} className={view === "AS" ? "active" : ""}>AS - Sistema</button>
           <button onClick={() => setView("AA")} className={view === "AA" ? "active" : ""}>AA - Atendente</button>
-          <button onClick={() => setView("PAINEL")} className={view === "PAINEL" ? "active" : ""}>Painel</button>
-          <button onClick={() => setView("MAMACO")} className={`danger ${view === "MAMACO" ? "active" : ""}`}>Mamaco</button>
+          <button onClick={() => setView("PAINEL")} className={view === "PAINEL" ? "active" : ""} style={{zIndex:2}}>Painel</button>
+          <button onClick={() => setView("MAMACO")} className={`danger ${view === "MAMACO" ? "active" : ""}`}>🦍</button>
         </div>
       </header>
 

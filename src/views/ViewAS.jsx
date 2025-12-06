@@ -1,6 +1,9 @@
-import React from "react";
+import {React, useEffect } from "react";
 
 export default function ViewAS({ tiposSenha, criarSenha, limparSistema, filaSenhas, relatorio }) {
+    useEffect(() =>{
+        document.title = "AS - Agente Sistema";
+    },[]);
     return (
         <div className="view">
             <h2>AS - Agente Sistema</h2>

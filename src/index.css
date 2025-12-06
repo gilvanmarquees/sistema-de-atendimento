@@ -44,6 +44,7 @@ h1 {
   border: 1px solid #ddd;
   background: transparent;
   cursor: pointer;
+  position: relative;
 }
 
 .menu button.active {

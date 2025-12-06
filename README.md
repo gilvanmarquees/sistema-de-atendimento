@@ -59,6 +59,39 @@ Mostra:
 
 ---
 
+## 🚀 Instalação e Execução
+
+### Requisitos
+- **Node.js** (versão 14 ou superior)
+- **npm** (gerenciador de pacotes)
+
+### Passos para Instalar
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/gilvanmarquees/sistema-de-atendimento.git
+   cd sistema-de-atendimento
+   ```
+
+2. **Instale as dependências**
+   ```bash
+   npm install
+   ```
+
+3. **Inicie o projeto em desenvolvimento**
+   ```bash
+   npm start
+   ```
+   A aplicação abrirá automaticamente em `http://localhost:3000`
+
+### Comandos Úteis
+
+- **Executar testes**: `npm test`
+- **Build para produção**: `npm run build`
+- **Ejetar configurações** (irreversível): `npm eject`
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **React.js**

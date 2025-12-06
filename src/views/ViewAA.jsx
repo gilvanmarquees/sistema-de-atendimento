@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 
 export default function ViewAA({
   guiches,
@@ -10,6 +10,9 @@ export default function ViewAA({
   senhasAtendidas,
   podeChamarProxima
 }) {
+  useEffect(() => {
+    document.title = "AA - Agente Atendente";
+  }, []);
   const [guicheSelecionado, setGuicheSelecionado] = useState(guiches && guiches.length > 0 ? guiches[0] : "1");
 
   return (

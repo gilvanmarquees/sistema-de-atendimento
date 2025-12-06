@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function ViewPainel({ ultimasChamadas, filaSenhas, relatorio }) {
+  useEffect(() =>{
+          document.title = "Painel de Chamadas";
+      },[]);
   return (
     <div className="view panel-view">
       <h2>Painel de Chamadas</h2>

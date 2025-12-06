@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function ViewAC({ tiposSenha, criarSenha, filaSenhas, totalEmitidas }) {
+    useEffect(() =>{
+            document.title = "AC - Totem (Cliente)";
+        },[]);
     return (
         <div className="view">
             <h2>AC - Totem (Cliente)</h2>
