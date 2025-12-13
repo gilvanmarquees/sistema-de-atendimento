@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export default function ViewAC({ tiposSenha, criarSenha, filaSenhas, totalEmitidas }) {
+export default function ViewAC({ tiposSenha, criarSenha, filaSenhas, totalEmitidas, dataAtualFormatada}) {
     useEffect(() =>{
             document.title = "AC - Totem (Cliente)";
         },[]);
@@ -14,16 +14,6 @@ export default function ViewAC({ tiposSenha, criarSenha, filaSenhas, totalEmitid
                 ))}
             </div>
             <small>Senhas emitidas hoje: {totalEmitidas}</small>
-
-            <section className="queue-preview">
-                <h3>Fila atual (próximas)</h3>
-                <ol>
-                    {filaSenhas.map((s) => (
-                        <li key={s.id}>{s.id} — {s.tipo} — {new Date(s.emitidaEm).toLocaleTimeString()}</li>
-                    ))}
-                    {filaSenhas.length === 0 && <li>(vazia)</li>}
-                </ol>
-            </section>
         </div>
     );
 }

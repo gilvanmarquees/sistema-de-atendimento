@@ -8,7 +8,8 @@ export default function ViewAA({
   filaSenhas,
   ultimasChamadas,
   senhasAtendidas,
-  podeChamarProxima
+  podeChamarProxima,
+  dataAtualFormatada,
 }) {
   useEffect(() => {
     document.title = "AA - Agente Atendente";
@@ -40,26 +41,14 @@ export default function ViewAA({
       <section>
         <h3>Fila (visual)</h3>
         <ol>
-          {filaSenhas.filter(s => !s.descartada).map((s) => (
+          {filaSenhas.filter(s => !s.descartada && s.emitidaEm?.slice(0, 10) === dataAtualFormatada).length === 0 ? (<span>FILA VAZIA</span>) :
+          filaSenhas.filter(s => !s.descartada && s.emitidaEm?.slice(0, 10) === dataAtualFormatada).map((s) => (
             <li key={s.id}>
               {s.id} — {s.tipo}
               <button className="small" onClick={() => jogarForaSenha(s.id)} style={{ marginLeft: 8 }}>Descartar</button>
             </li>
           ))}
-          {filaSenhas.length === 0 && <li>(vazia)</li>}
         </ol>
-      </section>
-
-      <section>
-        <h3>Últimas chamadas (painel)</h3>
-        <ul>
-          {ultimasChamadas.length === 0 && <li>(nenhuma chamada)</li>}
-          {ultimasChamadas.map((c) => (
-            <li key={c.id}>
-              {c.id} — {c.tipo} — guichê {c.guiche} — {new Date(c.chamadoEm).toLocaleTimeString()}
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section>

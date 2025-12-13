@@ -1,71 +1,84 @@
 /* index.css */
+
+/* variaveis CSS pra facilitar a vida e manter consistencia */
 :root {
-  --bg: #f3f6fb;
-  --card: #ffffff;
-  --accent: #0b6cff;
-  --danger: #e03b3b;
-  --muted: #666;
+  --bg: #f3f6fb; /* azul clarim pro fundo */
+  --card: #ffffff; /* branco pra cards */
+  --accent: #0b6cff; /* azul pra destaque */
+  --danger: #e03b3b; /* vermelho pra acoes perigosas */
+  --muted: #666; /* cinza pra textos secundarios */
 }
 
+/* reset basico - garante que tudo use box-sizing certinho */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* inclui padding e border no tamanho total */
   font-family: Inter, Roboto, Arial, sans-serif;
 }
 
 body {
-  margin: 0;
+  margin: 0; /* tira margem padrao do navegador */
   background: var(--bg);
-  color: #111;
+  color: #111; /* texto quase preto */
 }
 
+/* container principal do app */
 .app {
-  max-width: 980px;
-  margin: 22px auto;
+  max-width: 980px; /* limita largura maxima */
+  margin: 22px auto; /* centraliza horizontalmente */
   padding: 16px;
 }
 
+/* cabeçalho com titulo e menu */
 header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  flex-direction: column; /* empilha titulo e menu um em cima do outro */
+  gap: 12px; /* espacinho entre os elementos */
   margin-bottom: 12px;
 }
 
 h1 {
   font-size: 18px;
-  margin: 0;
+  margin: 0; /* remove margem padrão */
+}
+
+/* botoes do menu de navegacao entre views */
+.menu {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap; /* quebra linha quando nao cabe */
 }
 
 .menu button {
-  margin-left: 6px;
   padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  background: transparent;
-  cursor: pointer;
+  border-radius: 8px; /* cantos arredondados */
+  border: 1px solid #ddd; /* borda cinza clara */
+  background: transparent; /* sem fundo quando não ativo */
+  cursor: pointer; /* mostra mãozinha ao passar mouse */
   position: relative;
 }
 
+/* botao ativo no menu */
 .menu button.active {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
+  background: var(--accent); /* fundo azul */
+  color: white; /* texto branco */
+  border-color: var(--accent); /* borda azul */
 }
 
+/* container de cada view (AC, AS, AA, etc) */
 .view {
   background: var(--card);
   padding: 14px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(20, 20, 30, 0.04);
+  border-radius: 8px; /* deixa as bordas arredondadas */
+  box-shadow: 0 2px 6px rgba(20, 20, 30, 0.04); /* sombra bem leve */
   margin-bottom: 12px;
-  min-height: calc(100vh - 162px);
+  min-height: calc(100vh - 162px); /* pra view ocupar altura minima */
 }
 
+/* linha com botoes de acao */
 .btn-row {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* permite quebrar em varias linhas */
   margin: 8px 0 12px;
 }
 
@@ -74,25 +87,27 @@ h1 {
   border-radius: 8px;
   border: 1px solid #ddd;
   cursor: pointer;
-  background: #fff;
+  background: #fff; /* fundo branco */
 }
 
+/* botao de acao perigosa (deletar, reiniciar, etc) */
 .danger {
-  background: var(--danger)!important;
-  color: white;
-  border-color: var(--danger)!important;
+  background: var(--danger)!important; /* vermelho */
+  color: white; /* texto branco */
+  border-color: var(--danger)!important; /* borda vermelha */
 }
 
+/* controles gerais tipo selects e inputs */
 .controls {
   display: flex;
   gap: 10px;
-  align-items: center;
+  align-items: center; /* alinha verticalmente */
   margin-bottom: 10px;
 }
 
 .controls select {
   margin-left: 6px;
-  padding: 6px;
+  padding: 6px; /* espacinho interno */
 }
 
 .queue-preview,
@@ -100,52 +115,337 @@ h1 {
   margin-top: 12px;
 }
 
+/* botao pequeno (tipo os de iniciar/encerrar expediente) */
 .small {
   margin-left: 8px;
   padding: 6px 8px;
-  font-size: 12px;
+  font-size: 12px; /* fonte menor */
   border-radius: 6px;
 }
 
+/* tabelas simples dos relatorios */
 .simple-table {
-  width: 100%;
-  border-collapse: collapse;
+  width: 100%; /* ocupa largura toda */
+  border-collapse: collapse; /* junta as bordas das celulas */
   margin-top: 8px;
 }
 
 .simple-table th,
 .simple-table td {
-  border: 1px solid #eee;
+  border: 1px solid #eee; /* borda bem clara */
   padding: 6px 8px;
-  text-align: left;
-  font-size: 13px;
+  text-align: left; /* alinha texto à esquerda */
+  font-size: 13px; /* fonte pequena */
 }
 
+/* grid generico (nao usado no painel) */
 .panel-grid {
   display: flex;
-  gap: 12px;
+  gap: 12px; /* espaço entre colunas */
 }
 
 .panel-big {
-  flex: 2;
+  flex: 2; /* ocupa dobro do espaço */
 }
 
 .panel-side {
-  flex: 1;
-  background: #fafafa;
+  flex: 1; /* ocupa uma parte */
+  background: #fafafa; /* cinza bem claro */
   padding: 10px;
   border-radius: 8px;
 }
 
+/* texto secundario/desabilitado */
 .muted {
-  color: var(--muted);
+  color: var(--muted); /* cinza */
   font-size: 13px;
   margin-left: 6px;
 }
 
+/* inputs de data e hora */
+input[type="date"],
+input[type="time"] {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc; /* borda cinza */
+}
+
+select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
 footer {
   text-align: center;
-  color: var(--muted);
+  color: var(--muted); /* texto cinza */
   font-size: 13px;
   margin-top: 10px;
+}
+
+/* ===== ESTILOS DO PAINEL DE CHAMADAS ===== */
+
+/* container principal do painel - ocupa altura total */
+.painel-chamadas {
+  background: #ffffff;
+  color: #000;
+  padding: 0;
+  height: calc(100vh - 57px); /* altura da tela menos o header */
+  display: flex;
+  flex-direction: column; /* empilha os elementos verticalmente */
+  overflow: hidden; /* esconde qualquer coisa que vaze */
+}
+
+/* header preto do painel */
+.painel-header {
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  background: #000; /* fundo preto */
+  color: #fff; /* texto branco */
+  border-bottom: 3px solid #333; /* linha grossa embaixo */
+  flex-direction: column;
+  gap: 0; /* sem espaço entre elementos */
+}
+
+.painel-header h1 {
+  font-size: 2rem;
+  margin: 0 0 8px 0;
+  font-weight: 700; /* bem negrito */
+  letter-spacing: 2px; /* espaça as letras */
+}
+
+/* area que mostra a chamada atual em destaque */
+.painel-principal {
+  background: #f5f5f5;
+  padding: 10px 30px;
+  border-bottom: 2px solid #ddd;
+  flex-shrink: 0; /* nao encolhe quando falta espaço */
+}
+
+.chamada-atual {
+  text-align: center;
+  color: #000; /* texto preto */
+}
+
+.chamada-atual.sem-chamada {
+  padding: 30px 20px; /* padding maior quando vazio */
+  color: #666; /* texto cinza quando vazio */
+}
+
+.chamada-label {
+  font-size: 1rem;
+  font-weight: 600; /* meio negrito */
+  color: #666; /* cinza */
+  margin-bottom: 10px;
+  letter-spacing: 1px; /* espaça as letras */
+}
+
+/* numero da senha sendo chamada - bem grande */
+.chamada-senha {
+  font-size: 3.5rem; /* tamanho gigante */
+  font-weight: 900; /* negrito pesado */
+  color: #000; /* preto */
+  margin: 15px 0;
+  letter-spacing: 2px; /* espaça bem as letras */
+}
+
+/* area do guiche na chamada principal */
+.chamada-guiche {
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center; /* centraliza vertical */
+  gap: 20px; /* espaço entre label e numero */
+  margin: 20px 0;
+}
+
+.guiche-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333; /* cinza escuro */
+}
+
+/* numero do guiche com borda preta */
+.guiche-numero {
+  font-size: 2.5rem; /* bem grande */
+  font-weight: 900; /* bem negrito */
+  color: #000; /* numero preto */
+  background: #fff; /* fundo branco */
+  border: 3px solid #000; /* borda grossa preta */
+  border-radius: 8px; /* cantos arredondados */
+  width: 70px; /* largura fixa */
+  height: 70px; /* altura fixa (fica quadrado) */
+  display: flex; /* permite centralizar facil */
+  align-items: center; /* centraliza vertical */
+  justify-content: center; /* centraliza horizontal */
+}
+
+/* badge do tipo de senha (SP, SE, SG) */
+.chamada-tipo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666; /* texto cinza */
+  background: #e0e0e0; /* fundo cinza claro */
+  padding: 6px 18px;
+  border-radius: 4px;
+  display: inline-block; /* comporta como bloco inline */
+}
+
+/* grid com duas colunas: ultimas chamadas + proximas da fila */
+.painel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas do mesmo tamanho */
+  gap: 20px;
+  padding: 20px;
+  flex: 1; /* ocupa todo espaço disponivel */
+  overflow: hidden;
+  min-height: 0; /* truque pra funcionar scroll interno */
+}
+
+/* cada secao dentro do grid */
+.painel-section {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* empilha titulo e lista */
+  overflow: hidden; /* necessario pro scroll funcionar */
+  min-height: 0;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700; /* bem negrito */
+  color: #000; /* preto */
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #333; /* linha grossa embaixo */
+  flex-shrink: 0; /* não encolhe */
+}
+
+/* listas de chamadas e proximas (com scroll proprio) */
+.chamadas-lista,
+.proximas-lista {
+  flex: 1;
+  overflow-y: auto; /* adiciona scroll vertical quando necessario */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+}
+
+/* item individual de chamada ou proxima senha */
+.chamada-item,
+.proxima-item {
+  display: flex;
+  align-items: center; /* centraliza vertical */
+  gap: 10px; /* espaço entre elementos */
+  padding: 10px;
+  background: #f5f5f5; /* fundo cinza bem claro */
+  border-radius: 4px;
+  border-left: 3px solid #000; /* barra preta na esquerda */
+  flex-shrink: 0; /* não encolhe */
+}
+
+.item-numero,
+.proxima-posicao {
+  font-weight: 700; /* negrito */
+  color: #666; /* cinza */
+  min-width: 30px; /* largura mínima pra alinhar */
+}
+
+.item-senha,
+.proxima-senha {
+  font-weight: 700; /* negrito */
+  color: #000; /* preto */
+  font-size: 1rem;
+  flex: 1; /* ocupa espaço restante */
+}
+
+.item-guiche {
+  font-size: 0.85rem; /* fonte pequena */
+  color: #666; /* cinza */
+}
+
+/* badge pequeno do tipo */
+.item-tipo,
+.proxima-tipo {
+  font-size: 0.8rem; /* bem pequeno */
+  font-weight: 600;
+  padding: 3px 8px; /* padding compacto */
+  border-radius: 3px;
+  background: #e0e0e0; /* cinza claro */
+  color: #333; /* texto cinza escuro */
+}
+
+/* cores dos tipos (por enquanto todos iguais - cinza) */
+.tipo-sp,
+.tipo-se,
+.tipo-sg {
+  background: #e0e0e0; /* cinza claro */
+  color: #333; /* texto cinza escuro */
+}
+
+/* mensagem quando nao tem chamadas */
+.chamada-vazia {
+  text-align: center;
+  color: #999; /* cinza claro */
+  padding: 30px; /* padding grande */
+  font-style: italic; /* texto em itálico */
+}
+
+/* barra de resumo embaixo do painel */
+.painel-resumo {
+  display: flex;
+  justify-content: center; /* centraliza os itens */
+  gap: 20px; /* espaço entre itens */
+  padding: 12px 20px;
+  background: #f5f5f5; /* fundo cinza claro */
+  border-top: 1px solid #ddd; /* linha em cima */
+  flex-shrink: 0; /* não encolhe */
+}
+
+.resumo-item {
+  display: flex;
+  align-items: center; /* alinha vertical */
+  gap: 8px; /* espaço entre valor e label */
+  padding: 6px 15px;
+  background: #fff; /* fundo branco */
+  border: 1px solid #ddd; /* borda cinza */
+  border-radius: 4px;
+}
+
+.resumo-valor {
+  font-size: 1.2rem; /* numero maior */
+  font-weight: 700; /* bem negrito */
+  color: #000; /* preto */
+}
+
+.resumo-label {
+  font-size: 0.8rem; /* texto menor */
+  color: #666; /* cinza */
+}
+
+/* responsivo pra telas pequenas */
+@media (max-width: 768px) {
+  .painel-grid {
+    grid-template-columns: 1fr; /* uma coluna so */
+  }
+  
+  .painel-resumo {
+    flex-wrap: wrap; /* permite quebrar linhas */
+    gap: 10px; /* espaço menor */
+  }
+  
+  /* diminui tamanho das fontes grandes */
+  .chamada-senha {
+    font-size: 2.5rem; /* reduz de 3.5rem */
+  }
+  
+  .guiche-numero {
+    font-size: 2rem; /* reduz de 2.5rem */
+    width: 60px; /* diminui largura */
+    height: 60px; /* diminui altura */
+  }
 }
