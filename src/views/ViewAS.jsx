@@ -106,7 +106,8 @@ export default function ViewAS({
             <section>
                 <h3>Últimas senhas na fila</h3>
                 <ul>
-                    {[...filaSenhas].slice(-8).reverse().map((s) => (
+                    {[...filaSenhas].slice(-8).reverse().filter((s) => s.emitidaEm?.slice(0, 10) === dataAtualFormatada).length === 0 ? (<span>FILA VAZIA</span>) :
+                    [...filaSenhas].slice(-8).reverse().filter((s) => s.emitidaEm?.slice(0, 10) === dataAtualFormatada).map((s) => (
                         <li key={s.id}>{s.id} — {s.tipo} — {new Date(s.emitidaEm).toLocaleTimeString()}</li>
                     ))}
                     {filaSenhas.length === 0 && <span>FILA VAZIA</span>}
