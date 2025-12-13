@@ -242,11 +242,11 @@ function criarSenha(tipo, emissor = "AC") {
 
 ### v2.2.1 - 12/12/2024
 **Correções:**
-- 🐛 **Correção de timestamps simulados**
+- 🛠️ **Correção de timestamps simulados**
   - Senhas finalizadas agora usam `dataAtualSimulada` em vez de data real
   - Senhas descartadas agora usam `dataAtualSimulada` em vez de data real
 
-- 🐛 **Correção de status nos relatórios**
+- 🛠️ **Correção de status nos relatórios**
   - Senhas descartadas agora aparecem com status "Descartada" em vez de "Pendente"
 
 **Melhorias:**
