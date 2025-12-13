@@ -238,7 +238,7 @@ function criarSenha(tipo, emissor = "AC") {
 
 ---
 
-## 📝 Versionamento
+## 📝 Versionamento detalhado
 
 ### v2.2.1 - 12/12/2024
 **Correções:**
