@@ -116,14 +116,14 @@ export default function ViewAS({
             <section>
                 <h3>Relatório Diário — {new Date(dataAtualFormatada).toLocaleDateString("pt-BR")}</h3>
                 
-                <h4 style={{ marginTop: 12 }}>Quantitativo Geral</h4>
+                <h4 style={{ marginTop: 12 }}>Total Geral</h4>
                 <ul>
                     <li><strong>Senhas emitidas:</strong> {relatorio.emitidas}</li>
                     <li><strong>Senhas atendidas:</strong> {relatorio.atendidas}</li>
                     <li><strong>Senhas descartadas:</strong> {relatorio.descartadas}</li>
                 </ul>
 
-                <h4 style={{ marginTop: 12 }}>Quantitativo por Prioridade</h4>
+                <h4 style={{ marginTop: 12 }}>Total por tipo</h4>
                 <p><strong>Emitidas:</strong> SP {relatorio.porTipoEmitidas.SP} | SE {relatorio.porTipoEmitidas.SE} | SG {relatorio.porTipoEmitidas.SG}</p>
                 <p><strong>Atendidas:</strong> SP {relatorio.porTipoAtendidas.SP} | SE {relatorio.porTipoAtendidas.SE} | SG {relatorio.porTipoAtendidas.SG}</p>
 
