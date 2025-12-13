@@ -110,7 +110,6 @@ npm start
 - O painel mostra:
   - Senha atualmente sendo chamada
   - Últimas 5 chamadas
-  - Próximas 10 senhas da fila
   - Resumo do dia (emitidas, chamadas, na fila, descartadas)
 
 ### 4. Chamada do Cliente
