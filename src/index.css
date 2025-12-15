@@ -311,7 +311,7 @@ footer {
   display: flex;
   flex-direction: column; /* empilha titulo e lista */
   overflow: hidden; /* necessario pro scroll funcionar */
-  min-height: 0;
+  min-height: fit-content;
 }
 
 .section-title {

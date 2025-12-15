@@ -37,9 +37,8 @@ export default function ViewPainel({ ultimasChamadas, filaSenhas, dataAtualForma
         )}
       </div>
 
-      <div className="painel-grid">
         {/* Últimas chamadas */}
-        <div className="painel-section">
+        <div className="painel-section" style={{marginTop:"15px"}}>
           <h3 className="section-title">Últimas Chamadas</h3>
           <div className="chamadas-lista">
             {ultimasChamadas5.slice(1).map((c, index) => (
@@ -55,25 +54,6 @@ export default function ViewPainel({ ultimasChamadas, filaSenhas, dataAtualForma
             )}
           </div>
         </div>
-
-        {/* Próximas senhas */}
-        <div className="painel-section">
-          <h3 className="section-title">Próximas na Fila</h3>
-          <div className="proximas-lista">
-            {proximasFila.length === 0 ? (
-              <div className="chamada-vazia">Fila vazia</div>
-            ) : (
-              proximasFila.map((s, index) => (
-                <div key={s.id} className="proxima-item">
-                  <span className="proxima-posicao">{index + 1}</span>
-                  <span className="proxima-senha">{s.id}</span>
-                  <span className={`proxima-tipo tipo-${s.tipo.toLowerCase()}`}>{s.tipo}</span>
-                </div>
-              ))
-            )}
-          </div>
-        </div>
-      </div>
 
       {/* Resumo do dia */}
       <div className="painel-resumo">

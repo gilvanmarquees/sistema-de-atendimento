@@ -5,7 +5,7 @@ Projeto da Faculdade – Desenvolvimento Front-end com React
 
 Dei meu máximo nesse projeto. De verdade. Dediquei bastante tempo e esforço, sempre tentando deixar tudo cada vez mais perto do que eu tinha imaginado. Tenho um pouco mais de 1 ano de experiência com Laravel e, sinceramente, eu tinha um pouco de medo de sair da minha zona de conforto — ainda mais usando um framework que já está meio ultrapassado… mas fazer o quê, é o que eu conhecia! 😂
 
-Este semestre conheci o React e acabei gostando muito: a facilidade, a organização e o tanto de coisa incrível que dá pra fazer me surpreenderam. Sei que o projeto ainda tem algumas imperfeições, mas tentei melhorar sempre que podia — afinal, é meu primeiro contato com React, então dá um descontinho aí, né? KKKKKK
+Este semestre conheci o React e acabei gostando muito da facilidade, a organização e o tanto de coisa incrível que dá pra fazer me surpreenderam. Sei que o projeto ainda tem algumas imperfeições, mas tentei melhorar sempre que podia — afinal, é meu primeiro contato com React, então dá um descontinho aí, né? KKKKKK
 
 Minhas principais fontes foram a [documentação oficial do React](https://pt-br.react.dev/learn) e o [W3Schools](https://www.w3schools.com/react/). Usei IA também, mas foi só pra resolver alguns bugs teimosos que tavam tirando meu sono — eu juro! 😅
 
