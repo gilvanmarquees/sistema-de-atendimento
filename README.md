@@ -3,7 +3,7 @@ Projeto da Faculdade – Desenvolvimento Front-end com React
 
 ## 💭 Palavras do Desenvolvedor
 
-Dei meu máximo nesse projeto. De verdade. Dediquei bastante tempo e esforço, sempre tentando deixar tudo cada vez mais perto do que eu tinha imaginado. Tenho uns 4 anos de experiência com Laravel e, sinceramente, eu tinha um pouco de medo de sair da minha zona de conforto — ainda mais usando um framework que já está meio ultrapassado… mas fazer o quê, é o que eu conhecia! 😂
+Dei meu máximo nesse projeto. De verdade. Dediquei bastante tempo e esforço, sempre tentando deixar tudo cada vez mais perto do que eu tinha imaginado. Tenho um pouco mais de 1 ano de experiência com Laravel e, sinceramente, eu tinha um pouco de medo de sair da minha zona de conforto — ainda mais usando um framework que já está meio ultrapassado… mas fazer o quê, é o que eu conhecia! 😂
 
 Este semestre conheci o React e acabei gostando muito: a facilidade, a organização e o tanto de coisa incrível que dá pra fazer me surpreenderam. Sei que o projeto ainda tem algumas imperfeições, mas tentei melhorar sempre que podia — afinal, é meu primeiro contato com React, então dá um descontinho aí, né? KKKKKK
 
